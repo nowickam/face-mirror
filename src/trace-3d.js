@@ -1,4 +1,4 @@
-const MODEL_URL = "../import/models";
+const MODEL_URL = "./import/models";
 const POINTS_NO = 68;
 const DIST = 175;
 const FOV = 75;
