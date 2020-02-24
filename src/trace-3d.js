@@ -30,6 +30,8 @@ const JAW = 16;
 
 let initZ, initY, initDist;
 
+let initXFace, initYFace;
+
 let root, scene, renderer, geometry, material, camera,startView;
 let imageCapture;
 let width, height;
@@ -420,11 +422,16 @@ function setDepth() {
 function updatePoints(result) {
     let index = 0;
 
+    if(firstLine){
+        initXFace=result.landmarks.shift.x;
+        initYFace=result.landmarks.shift.y;
+    }
+
     //map positions of landmark points
     result.unshiftedLandmarks.positions.map(
         point => {
-            points[index++] = -point.x - result.landmarks.shift.x + 1.5 * result.landmarks.imageWidth ;
-            points[index++] = -point.y - result.landmarks.shift.y + 1.5 * result.landmarks.imageHeight ;
+            points[index++] = -point.x + initXFace - result.landmarks.shift.x + result.landmarks.imageWidth/2 ;
+            points[index++] = -point.y + initYFace - result.landmarks.shift.y + result.landmarks.imageHeight/1.5;
             index++;
         }
     )
@@ -464,7 +471,7 @@ function drawPaths() {
         let curvePoints = curve.getPoints(CURVE - 1);
         //map curve points and colors
         for (let j = 0; j < CURVE; j++) {
-            let colorValue = Math.tanh(Math.sqrt(Math.pow(start.x - end.x, 2) + Math.pow(start.y - end.y, 2)) / initDist[i]);
+            let colorValue = Math.tanh(Math.sqrt(Math.pow(start.x - end.x, 2) + Math.pow(start.y - end.y, 2)) / (1.5*initDist[i]));
             lineColor[index] = colorValue;
             line[index++] = curvePoints[j].x;
             lineColor[index] = 1-colorValue;
