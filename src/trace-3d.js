@@ -423,8 +423,8 @@ function updatePoints(result) {
     //map positions of landmark points
     result.unshiftedLandmarks.positions.map(
         point => {
-            points[index++] = -point.x + result.landmarks.imageWidth / 2;
-            points[index++] = -point.y + result.landmarks.imageHeight / 1.5;
+            points[index++] = -point.x - result.landmarks.shift.x + 1.5 * result.landmarks.imageWidth ;
+            points[index++] = -point.y - result.landmarks.shift.y + 1.5 * result.landmarks.imageHeight ;
             index++;
         }
     )
@@ -494,6 +494,7 @@ function animate() {
                 img.src = URL.createObjectURL(blob);
                 faceapi.detectSingleFace(img).withFaceLandmarks()
                     .then(result => {
+                        console.log(result);
                         if (result === undefined) {
                             //go back and try to take a picture again
                             drawCount--;
