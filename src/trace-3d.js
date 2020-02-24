@@ -494,7 +494,6 @@ function animate() {
                 img.src = URL.createObjectURL(blob);
                 faceapi.detectSingleFace(img).withFaceLandmarks()
                     .then(result => {
-                        console.log(result);
                         if (result === undefined) {
                             //go back and try to take a picture again
                             drawCount--;
