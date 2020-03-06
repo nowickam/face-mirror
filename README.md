@@ -1,5 +1,5 @@
 # face-mirror
-The program is a personal project - a <b>web application aimed at displaying a graphical interpretation of the movement of 68 facial landmarks</b>.
+The program is a personal project - a <b>web application aimed at displaying a graphical interpretation of the movement of 68 facial landmarks</b>. Available at: https://nowickam.github.io/face-mirror/.
 
 - The input from the webcam is read using Image Capture API, available in Chrome 59. 
 - The landmarks are detected with the usage of face-api.js by [@justadudewhohacks](https://github.com/justadudewhohacks/face-api.js). The recognition models are first loaded and the position of unshifted landmarks as well as the general shift of the head are read. 
