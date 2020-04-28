@@ -6,7 +6,7 @@ const CAM_TAN = Math.tan(FOV / 2);
 const MAX_LINES = 1000;
 const CURVE = 8;
 const TIME = 200;
-const MIN_OFF = 80;
+const MIN_OFF = 150;
 const MAX_OFF = 20;
 
 const MOUTH1 = 51;

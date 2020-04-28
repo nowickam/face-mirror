@@ -6,3 +6,5 @@ The program is a personal project - a <b>web application aimed at displaying a g
 - Then the data is manipulated using a JavaScript WebGL-based library - three.js. Initial positions of the depth of particular points is hard-coded and the movement of the points is traced. The starting and ending positions of the point shift determine the Bezier curve that is drawn. The magnitude of the shift correspond to the color of the line (blue - small change, red - big change in position).
 
 The work is open for extensions, with a prospect of adding new ways of animating the movement of the landmarks.
+
+![face-mirror-4](https://user-images.githubusercontent.com/49707233/80527729-1e515300-8995-11ea-830c-95ed2924ada8.png)
