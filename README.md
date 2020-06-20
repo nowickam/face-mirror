@@ -7,4 +7,4 @@ The program is a personal project - a <b>web application aimed at displaying a g
 
 The work is open for extensions, with a prospect of adding new ways of animating the movement of the landmarks.
 
-![face-mirror-4](https://user-images.githubusercontent.com/49707233/80527729-1e515300-8995-11ea-830c-95ed2924ada8.png)
+![80527729-1e515300-8995-11ea-830c-95ed2924ada8_edited](https://user-images.githubusercontent.com/49707233/85196338-e6ea8d00-b2d9-11ea-90fe-6ca409a65234.png)
